@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-center font-sans bg-mainBgColor h-full px-4 font-light text-base text-mainTextColor;
+  }
+  nav {
+    @apply py-4 h-10 mb-8;
+  }
+  main {
+    @apply mt-24;
+  }
+}
+
+@layer utilities {
+  /*------------------------- HEADER STYLES ----------------------*/
+
+  .total-pending-bill {
+    @apply text-4xl my-4 text-DarkBlue font-semibold;
+  }
+  .nav-icon-box {
+    @apply h-8 grid justify-items-end;
+  }
+  .nav-icon {
+    @apply h-6 hover:cursor-pointer;
+  }
+  .header-info_text,
+  .Wallet-amount {
+    @apply text-lightGray;
+  }
+
+  /*------------------------- MAIN STYLES ----------------------*/
+
+  .main-body {
+    @apply bg-white rounded-t-2xl
+  }
+  .main-body_top {
+    @apply flex border-2 rounded-t-2xl border-solid w-full h-12 border-borderColor justify-evenly grow;
+  }
+  .divider {
+    @apply w-0 border border-borderColor;
+  }
+  .bill-menu,
+  .receipt-menu {
+    @apply flex self-center hover:cursor-pointer;
+  }
+}

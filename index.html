@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Receipt management application that manages your bills and ayments"
+    />
+    <title>Receipt Manager App</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script defer src="./src/js/controller.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-icon-box">
+          <img
+            src="./src/images/icons/menu.png"
+            alt="nav-icon"
+            class="nav-icon"
+          />
+        </div>
+      </nav>
+      <div class="header-info">
+        <p class="header-info_text">Pending Bills</p>
+        <h1 class="total-pending-bill">$0</h1>
+        <h6 class="Wallet-amount">$0 left in wallet</h6>
+      </div>
+    </header>
+    <main>
+      <section class="main-body">
+        <div class="main-body_top">
+          <div class="bill-menu">
+            <p>
+              <span>
+                <lord-icon
+                  src="https://cdn.lordicon.com/sygggnra.json"
+                  trigger="loop"
+                  delay="2000"
+                  style="width: 20px; height: 20px"
+                >
+                </lord-icon> </span
+              >Bills
+            </p>
+          </div>
+          <div class="divider"></div>
+          <div class="receipt-menu">
+            <p>
+              <span
+                ><lord-icon
+                  src="https://cdn.lordicon.com/aslgozpd.json"
+                  trigger="loop"
+                  style="width: 20px; height: 20px"
+                >
+                </lord-icon></span
+              >Receipts
+            </p>
+          </div>
+        </div>
+        <div class="main-body-menu">
+          <div>
+            <div class="filters">
+              <button class="filter-btn filter-btn-all">All Bills</button>
+              <button class="filter-btn filter-btn-unpaid">Unpaid</button>
+              <button class="filter-btn filter-btn-processing">Processing</button>
+              <button class="filter-btn filter-btn-paid">Paid</button>
+            </div>
+            <div class="sorter">
+
+            </div>
+          </div>
+        </div>
+        <section class="bills">
+          <div></div>
+        </section>
+        <section class="receipts"></section>
+      </section>
+    </main>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+  </body>
+</html>
