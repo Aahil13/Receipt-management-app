@@ -577,6 +577,22 @@ main {
   --tw-backdrop-sepia:  ;
 }
 
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
 /*------------------------- HEADER STYLES ----------------------*/
 
 .total-pending-bill {
@@ -648,4 +664,19 @@ main {
 .bill-menu:hover, 
   .receipt-menu:hover {
   cursor: pointer;
+}
+
+/*------------------------- FILTER STYLES ----------------------*/
+
+.filters {
+  display: flex;
+}
+
+.filters * {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 248 250 / var(--tw-bg-opacity));
+  padding: 0.5rem;
 }

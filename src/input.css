@@ -47,3 +47,13 @@
     @apply flex self-center hover:cursor-pointer;
   }
 }
+
+/*------------------------- FILTER STYLES ----------------------*/
+
+.filters{
+  @apply flex 
+}
+
+.filters *{
+  @apply mx-2 rounded-3xl bg-mainBgColor p-2
+}
