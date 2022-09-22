@@ -34,7 +34,7 @@
   /*------------------------- MAIN STYLES ----------------------*/
 
   .main-body {
-    @apply bg-white rounded-t-2xl
+    @apply bg-white rounded-t-2xl;
   }
   .main-body_top {
     @apply flex border-2 rounded-t-2xl border-solid w-full h-12 border-borderColor justify-evenly grow;
@@ -50,10 +50,52 @@
 
 /*------------------------- FILTER STYLES ----------------------*/
 
-.filters{
-  @apply flex 
+.filters {
+  @apply flex;
 }
 
-.filters *{
-  @apply mx-2 rounded-3xl bg-mainBgColor p-2
+.filters * {
+  @apply mx-2 rounded-3xl bg-mainBgColor p-2;
+}
+
+.filter-btn-all {
+  @apply bg-btnAllColor text-darkColor;
+}
+
+/*------------------------- BILL STYLES ----------------------*/
+
+.bill {
+  @apply w-72 h-64 border rounded-xl shadow-md p-2 flex flex-col hover:cursor-pointer hover:animate-bounce;
+}
+
+.bill-details {
+  @apply object-contain h-full w-full flex flex-col items-end justify-end text-right;
+}
+
+.bill-details * {
+  @apply my-1;
+}
+
+.bill-name {
+  @apply text-2xl font-semibold;
+}
+
+.bill-img {
+  @apply object-contain w-fit h-24 rounded-sm border p-1 shadow-md;
+}
+
+.bill-img img {
+  @apply h-full;
+}
+
+.paid {
+  @apply border-t-4 border-b-0 border-t-greenIndicator;
+}
+
+.unpaid {
+  @apply border-t-4 border-b-0 border-t-redIndicator;
+}
+
+.processing {
+  @apply border-t-4 border-b-0 border-t-blueIndicator;
 }
