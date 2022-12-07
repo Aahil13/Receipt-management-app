@@ -12,6 +12,9 @@
   main {
     @apply mt-24;
   }
+  .hidden-class{
+    @apply hidden
+  }
 }
 
 @layer utilities {
@@ -44,7 +47,7 @@
   }
   .bill-menu,
   .receipt-menu {
-    @apply flex self-center hover:cursor-pointer;
+    @apply flex justify-around items-center flex-wrap hover:cursor-pointer w-6/12;
   }
 }
 
@@ -86,6 +89,10 @@
 
 .bill-img img {
   @apply h-full;
+}
+
+.Btn-color{
+  @apply bg-borderColor
 }
 
 .paid {
