@@ -436,6 +436,10 @@ main {
   margin-top: 6rem;
 }
 
+.hidden-class {
+  display: none;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -678,7 +682,10 @@ main {
 .bill-menu, 
   .receipt-menu {
   display: flex;
-  align-self: center;
+  width: 50%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .bill-menu:hover, 
@@ -797,6 +804,11 @@ main {
 
 .bill-img img {
   height: 100%;
+}
+
+.Btn-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 233 251 / var(--tw-bg-opacity));
 }
 
 .paid {
