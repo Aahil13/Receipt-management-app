@@ -66,6 +66,16 @@
   @apply bg-btnAllColor text-darkColor;
 }
 
+.active-Paid {
+  @apply bg-paidBtnColor text-darkColor !important;
+}
+.active-Unpaid {
+  @apply bg-unpaidBtnColor text-darkColor !important;
+}
+.active-Processing {
+  @apply bg-btnAllColor text-darkColor !important;
+}
+
 /*------------------------- BILL STYLES ----------------------*/
 
 .bill {

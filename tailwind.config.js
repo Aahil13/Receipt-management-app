@@ -21,6 +21,8 @@ module.exports = {
         blueIndicator: "#495FE9",
         darkColor: "#050A29",
         btnAllColor: "#AAB5FA",
+        unpaidBtnColor: "#F8CECF",
+        paidBtnColor: "#C5EBD5",
       },
       keyframes: {
         bounce: {

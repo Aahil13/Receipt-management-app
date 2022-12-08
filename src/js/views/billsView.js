@@ -1,5 +1,6 @@
 const filterBtnParent = document.querySelector(".filters");
 export let billsArr = Array.from(document.querySelectorAll(".bill"));
+let btnArr = document.querySelectorAll(".filter-btn");
 
 function toggleBtn(btnClass) {
   filterBtnParent.addEventListener("click", (e) => {
@@ -24,7 +25,6 @@ export function togglebillView() {
   //   Paid bills
   toggleBtn("paid");
 
-  //   All bills
   filterBtnParent.addEventListener("click", (e) => {
     if (e.target.className !== "filter-btn filter-btn-all") return;
 
