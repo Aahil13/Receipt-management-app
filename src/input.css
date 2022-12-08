@@ -12,8 +12,9 @@
   main {
     @apply mt-24;
   }
-  .hidden-class{
-    @apply hidden
+
+  .hidden-class {
+    @apply hidden !important;
   }
 }
 
@@ -91,8 +92,8 @@
   @apply h-full;
 }
 
-.Btn-color{
-  @apply bg-borderColor
+.Btn-color {
+  @apply bg-borderColor;
 }
 
 .paid {

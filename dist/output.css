@@ -437,7 +437,7 @@ main {
 }
 
 .hidden-class {
-  display: none;
+  display: none !important;
 }
 
 *, ::before, ::after {
