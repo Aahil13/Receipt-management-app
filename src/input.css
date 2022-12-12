@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-center font-sans bg-mainBgColor h-full px-4 font-light text-base text-mainTextColor;
+    @apply text-center font-sans bg-mainBgColor h-full px-4 font-light text-base text-mainTextColor z-0 flex justify-around;
   }
   nav {
     @apply py-4 h-10 mb-8;
@@ -15,6 +15,10 @@
 
   .hidden-class {
     @apply hidden !important;
+  }
+
+  .container {
+    @apply relative;
   }
 }
 
@@ -50,6 +54,10 @@
   .receipt-menu {
     @apply flex justify-around items-center flex-wrap hover:cursor-pointer w-6/12;
   }
+
+  .Btn-color {
+    @apply bg-borderColor;
+  }
 }
 
 /*------------------------- FILTER STYLES ----------------------*/
@@ -62,24 +70,32 @@
   @apply mx-2 rounded-3xl bg-mainBgColor p-2;
 }
 
-.filter-btn-all {
-  @apply bg-btnAllColor text-darkColor;
+.filter-btn-all:focus,
+.filter-btn-allReceipts:focus {
+  @apply bg-btnAllColor;
 }
 
-.active-Paid {
-  @apply bg-paidBtnColor text-darkColor !important;
+.filter-btn-processing:focus,
+.filter-btn-confirmed:focus {
+  @apply bg-borderColor text-darkColor;
 }
-.active-Unpaid {
-  @apply bg-unpaidBtnColor text-darkColor !important;
+
+.filter-btn-unpaid:focus {
+  @apply bg-unpaidBtnColor text-darkColor;
 }
-.active-Processing {
-  @apply bg-btnAllColor text-darkColor !important;
+
+.filter-btn-paid:focus,
+.filter-btn-received:focus {
+  @apply bg-paidBtnColor;
 }
+
+/*------------------------- RECEIPT-FILTER STYLES ----------------------*/
 
 /*------------------------- BILL STYLES ----------------------*/
 
-.bill {
-  @apply w-72 h-64 border rounded-xl shadow-md p-2 flex flex-col hover:cursor-pointer hover:animate-bounce;
+.bill,
+.receipt {
+  @apply w-72 h-64 border rounded-xl shadow-md p-2 flex border-t-4 border-b-0 flex-col hover:cursor-pointer hover:animate-bounce;
 }
 
 .bill-details {
@@ -102,18 +118,34 @@
   @apply h-full;
 }
 
-.Btn-color {
-  @apply bg-borderColor;
-}
-
-.paid {
-  @apply border-t-4 border-b-0 border-t-greenIndicator;
+.paid,
+.received {
+  @apply border-t-greenIndicator;
 }
 
 .unpaid {
-  @apply border-t-4 border-b-0 border-t-redIndicator;
+  @apply border-t-redIndicator;
 }
 
-.processing {
-  @apply border-t-4 border-b-0 border-t-blueIndicator;
+.processing,
+.confirmed {
+  @apply border-t-blueIndicator;
+}
+
+.allReceipts {
+  @apply border-t-btnAllColor;
+}
+
+/*------------------------- MODAL STYLES ----------------------*/
+
+.modal {
+  @apply w-full absolute z-10 top-0 bottom-0 right-0 left-0 bg-black opacity-80 items-center justify-around hidden;
+}
+
+.menu {
+  @apply bg-unpaidBtnColor w-1/2 rounded-xl opacity-100;
+}
+
+.menu ul li {
+  @apply my-12 cursor-pointer text-white;
 }

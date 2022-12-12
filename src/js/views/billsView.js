@@ -1,8 +1,7 @@
 const filterBtnParent = document.querySelector(".filters");
 export let billsArr = Array.from(document.querySelectorAll(".bill"));
-let btnArr = document.querySelectorAll(".filter-btn");
 
-function toggleBtn(btnClass) {
+function handleSort(btnClass) {
   filterBtnParent.addEventListener("click", (e) => {
     if (e.target.className !== `filter-btn filter-btn-${btnClass}`) return;
 
@@ -15,16 +14,17 @@ function toggleBtn(btnClass) {
   });
 }
 
-export function togglebillView() {
+export function sortBills() {
   //   Unpaid bills
-  toggleBtn("unpaid");
+  handleSort("unpaid");
 
   //   processing bills
-  toggleBtn("processing");
+  handleSort("processing");
 
   //   Paid bills
-  toggleBtn("paid");
+  handleSort("paid");
 
+  // All bills
   filterBtnParent.addEventListener("click", (e) => {
     if (e.target.className !== "filter-btn filter-btn-all") return;
 

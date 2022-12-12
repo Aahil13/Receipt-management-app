@@ -17,179 +17,192 @@
     <script defer type="module" src="./src/js/controller.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="nav-icon-box">
-          <img
-            src="./src/images/icons/menu.png"
-            alt="nav-icon"
-            class="nav-icon"
-          />
+    <div class="container">
+      <header>
+        <nav>
+          <div class="nav-icon-box">
+            <img
+              src="./src/images/icons/menu.png"
+              alt="nav-icon"
+              class="nav-icon"
+            />
+          </div>
+        </nav>
+        <div class="header-info">
+          <p class="header-info_text">Pending Bills</p>
+          <h1 class="total-pending-bill">$0.0</h1>
+          <h6 class="Wallet-amount">$0.0 left in wallet</h6>
         </div>
-      </nav>
-      <div class="header-info">
-        <p class="header-info_text">Pending Bills</p>
-        <h1 class="total-pending-bill">$0.0</h1>
-        <h6 class="Wallet-amount">$0.0 left in wallet</h6>
+      </header>
+      <main>
+        <section class="main-body">
+          <div class="main-body_top">
+            <div class="bill-menu Btn-color">
+              <p>
+                <span>
+                  <lord-icon
+                    src="https://cdn.lordicon.com/sygggnra.json"
+                    trigger="loop"
+                    delay="2000"
+                    style="width: 20px; height: 20px"
+                  >
+                  </lord-icon> </span
+                >Bills
+              </p>
+            </div>
+            <div class="divider"></div>
+            <div class="receipt-menu">
+              <p>
+                <span
+                  ><lord-icon
+                    src="https://cdn.lordicon.com/aslgozpd.json"
+                    trigger="loop"
+                    style="width: 20px; height: 20px"
+                  >
+                  </lord-icon></span
+                >Receipts
+              </p>
+            </div>
+          </div>
+          <div class="view-body">
+            <section class="Bills">
+              <div class="main-body-menu">
+                <div class="flex justify-between p-3 items-center">
+                  <div class="filters">
+                    <button class="filter-btn filter-btn-all">All Bills</button>
+                    <button class="filter-btn filter-btn-unpaid">Unpaid</button>
+                    <button class="filter-btn filter-btn-processing">
+                      Processing
+                    </button>
+                    <button class="filter-btn filter-btn-paid">Paid</button>
+                  </div>
+                  <div class="sorter">
+                    <img src="./src/images/icons/sort.png" alt=sort-img">
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 test justify-items-center gap-4 p-4"
+              >
+                <div class="bill unpaid">
+                  <div class="bill-img">
+                    <img src="./src/images/egusi.jpg" alt="egusi" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Canned Egusi</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">June 17, 2022</small>
+                  </div>
+                </div>
+                <div class="bill paid">
+                  <div class="bill-img">
+                    <img src="./src/images/knife.jpg" alt="knife" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Santoku knives</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">May 3, 2022</small>
+                  </div>
+                </div>
+                <div class="bill processing">
+                  <div class="bill-img">
+                    <img src="./src/images/cards.jpg" alt="cards" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Playing Cards</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">May 15, 2022</small>
+                  </div>
+                </div>
+                <div class="bill paid">
+                  <div class="bill-img">
+                    <img src="./src/images/papa mesh.jpg" alt="cap" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Papa's Mesh Cap</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">Jan 25, 2022</small>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="Receipts hidden-class">
+              <div class="main-body-menu">
+                <div class="flex justify-between p-3 items-center">
+                  <div class="filters receipt-filters">
+                    <button class="filter-btn filter-btn-allReceipts">
+                      All Receipts
+                    </button>
+                    <button class="filter-btn filter-btn-received">
+                      Received
+                    </button>
+                    <button class="filter-btn filter-btn-confirmed">
+                      Confirmed
+                    </button>
+                  </div>
+                  <div class="sorter">
+                    <img src="./src/images/icons/sort.png" alt=sort-img">
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center gap-4 p-4"
+              >
+                <div class="receipt received">
+                  <div class="bill-img">
+                    <img src="./src/images/egusi.jpg" alt="egusi" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Canned Egusi</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">June 17, 2022</small>
+                  </div>
+                </div>
+                <div class="receipt allReceipts">
+                  <div class="bill-img">
+                    <img src="./src/images/knife.jpg" alt="knife" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Santoku knives</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">May 3, 2022</small>
+                  </div>
+                </div>
+                <div class="receipt received">
+                  <div class="bill-img">
+                    <img src="./src/images/cards.jpg" alt="cards" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Playing Cards</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">May 15, 2022</small>
+                  </div>
+                </div>
+                <div class="receipt confirmed">
+                  <div class="bill-img">
+                    <img src="./src/images/papa mesh.jpg" alt="cap" />
+                  </div>
+                  <div class="bill-details">
+                    <h2 class="bill-name">Papa's Mesh Cap</h2>
+                    <h4 class="bill-price">$0.0</h4>
+                    <small class="bill-date">Jan 25, 2022</small>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="modal">
+      <div class="menu">
+        <ul>
+          <li class="menu-items"><a>Home</a></li>
+          <li class="menu-items"><a>Wallet</a></li>
+          <li class="menu-items"><a>Profile</a></li>
+        </ul>
       </div>
-    </header>
-    <main>
-      <section class="main-body">
-        <div class="main-body_top">
-          <div class="bill-menu Btn-color">
-            <p>
-              <span>
-                <lord-icon
-                  src="https://cdn.lordicon.com/sygggnra.json"
-                  trigger="loop"
-                  delay="2000"
-                  style="width: 20px; height: 20px"
-                >
-                </lord-icon> </span
-              >Bills
-            </p>
-          </div>
-          <div class="divider"></div>
-          <div class="receipt-menu">
-            <p>
-              <span
-                ><lord-icon
-                  src="https://cdn.lordicon.com/aslgozpd.json"
-                  trigger="loop"
-                  style="width: 20px; height: 20px"
-                >
-                </lord-icon></span
-              >Receipts
-            </p>
-          </div>
-        </div>
-        <div class="view-body">
-          <section class="Bills">
-            <div class="main-body-menu">
-              <div class="flex justify-between p-3 items-center">
-                <div class="filters">
-                  <button class="filter-btn filter-btn-all">All Bills</button>
-                  <button class="filter-btn filter-btn-unpaid">Unpaid</button>
-                  <button class="filter-btn filter-btn-processing">
-                    Processing
-                  </button>
-                  <button class="filter-btn filter-btn-paid">Paid</button>
-                </div>
-                <div class="sorter">
-                  <img src="./src/images/icons/sort.png" alt=sort-img">
-                </div>
-              </div>
-            </div>
-            <div
-              class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 test justify-items-center gap-4 p-4"
-            >
-              <div class="bill unpaid">
-                <div class="bill-img">
-                  <img src="./src/images/egusi.jpg" alt="egusi" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Canned Egusi</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">June 17, 2022</small>
-                </div>
-              </div>
-              <div class="bill paid">
-                <div class="bill-img">
-                  <img src="./src/images/knife.jpg" alt="knife" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Santoku knives</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">May 3, 2022</small>
-                </div>
-              </div>
-              <div class="bill processing">
-                <div class="bill-img">
-                  <img src="./src/images/cards.jpg" alt="cards" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Playing Cards</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">May 15, 2022</small>
-                </div>
-              </div>
-              <div class="bill paid">
-                <div class="bill-img">
-                  <img src="./src/images/papa mesh.jpg" alt="cap" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Papa's Mesh Cap</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">Jan 25, 2022</small>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="Receipts hidden-class">
-            <div class="main-body-menu">
-              <div class="flex justify-between p-3 items-center">
-                <div class="filters">
-                  <button class="filter-btn filter-btn-all">
-                    All Receipts
-                  </button>
-                  <button class="filter-btn filter-btn-unpaid">Received</button>
-                  <button class="filter-btn filter-btn-processing">
-                    Confirmed
-                  </button>
-                </div>
-                <div class="sorter">
-                  <img src="./src/images/icons/sort.png" alt=sort-img">
-                </div>
-              </div>
-            </div>
-            <div
-              class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center gap-4 p-4"
-            >
-              <div class="bill unpaid">
-                <div class="bill-img">
-                  <img src="./src/images/egusi.jpg" alt="egusi" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Canned Egusi</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">June 17, 2022</small>
-                </div>
-              </div>
-              <div class="bill paid">
-                <div class="bill-img">
-                  <img src="./src/images/knife.jpg" alt="knife" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Santoku knives</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">May 3, 2022</small>
-                </div>
-              </div>
-              <div class="bill processing">
-                <div class="bill-img">
-                  <img src="./src/images/cards.jpg" alt="cards" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Playing Cards</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">May 15, 2022</small>
-                </div>
-              </div>
-              <div class="bill paid">
-                <div class="bill-img">
-                  <img src="./src/images/papa mesh.jpg" alt="cap" />
-                </div>
-                <div class="bill-details">
-                  <h2 class="bill-name">Papa's Mesh Cap</h2>
-                  <h4 class="bill-price">$0.0</h4>
-                  <small class="bill-date">Jan 25, 2022</small>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
-    </main>
+    </div>
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
   </body>
 </html>
